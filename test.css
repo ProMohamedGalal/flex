@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+body {
+  font-family: 'Merienda', cursive;
+  height:10000px;
+}
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    padding:5px;
+    width: 100%;
+    height: auto;
+    overflow: hidden
+}
+.row .column {
+    flex:25%;
+    max-width: 25%;
+}
+.row .column img {
+    width: 100%;
+    margin-bottom: 1px;
+    opacity:0.4;
+    transition: .5s all ease-in-out
+}
+.row .column img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 21px 15px #333;
+    filter: sepia(5);
+    }
+@media (max-width: 600px) {
+    .row .column {flex: 100%;max-width: 100%}
+}
+@media (min-width:601px)and(max-width: 800px) {
+    .row .column {flex: 75%;max-width: 75%}
+}
+@media (min-width:801px){
+    .row .column {flex: 25%;max-width: 25%}
+}
